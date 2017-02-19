@@ -212,7 +212,7 @@ class Feature extends Component {
                     <div className="row">
                         <div className="col-xs-3 meal-column">
                             <section className="breakfast">
-                                <h3 className="meal-header text-center breakfast">B'FAST</h3>
+                                <h3 className="meal-header text-center breakfast-header">BREAKFAST</h3>
                                 {this.renderFields('breakfast')}
                             </section>
                         </div>
