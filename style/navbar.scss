@@ -1,0 +1,26 @@
+.user-info, .sign-out-link, .sign-in-link, .sign-up-link {
+    font: 10pt 'Tahoma';
+    letter-spacing: .1em;
+}
+
+.sign-out-link, .sign-in-link, .sign-up-link a {
+    text-decoration: none;
+}
+
+.main-nav > li {
+    margin-right: 25px;
+    margin-top: 25px;
+    text-decoration: none;
+    list-style: none;
+}
+
+  .main-header,
+  .main-nav {
+      display: flex
+  }
+
+  .main-header {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 25px;
+  }

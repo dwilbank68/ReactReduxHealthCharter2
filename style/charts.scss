@@ -1,0 +1,63 @@
+.chart {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #CCC;
+}
+
+.chart-row {
+    margin-top: 40px;
+}
+
+.chart-diet {}
+.chart-stats {}
+
+.legend-box {
+    border: 1px solid gray;
+    height: 18px;
+    width: 135px;
+    margin-top: 5px;
+    padding-top: 3px;
+    text-align: center;
+    letter-spacing: .1em;
+}
+
+.legend-text {
+    margin-top: 12px;
+}
+
+.chart-legend {
+    font: 8pt 'SentinelSemibold';
+    padding-left: 33px;
+    padding-top: 10px;
+    //height: 150px;
+    //display: -webkit-flex;
+    //display: flex;
+    //
+    //-webkit-flex-direction: column;
+    //flex-direction: column;
+    //
+    //-webkit-align-content: space-around;
+    //justify-content: space-around;
+    //letter-spacing: .25em;
+}
+
+.leg-salt { background-color: white; }
+
+.leg-water {
+    background-color: rgba(80,147,163,.5);
+    color: white;
+}
+
+.leg-heartrate { color: red; }
+
+.leg-weight {}
+
+.leg-sys {
+    background-color: rgba(204,39,62,.8);
+    color: white;
+}
+
+.leg-dia {
+    background-color: rgba(170,28,58,.8);
+    color: white;
+}

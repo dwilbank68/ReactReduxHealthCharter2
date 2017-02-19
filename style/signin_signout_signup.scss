@@ -1,0 +1,50 @@
+.signin, .signup {
+
+    margin-top: 120px;
+    font: 12pt 'ZigguratHTFBlackItalic_1';
+
+    input {
+        font: 14pt 'SentinelBlackItalic';
+        height: 50px;
+        text-indent: 5px;
+        background-color: transparent;
+        border-color: black !important;
+    }
+}
+
+.signout {
+    margin-top: 120px;
+    font: 24pt 'SentinelSemibold';
+}
+
+.form-messages {
+    margin-top: -3px;
+}
+
+#btn-signin, #btn-signup {
+    margin-top: 8px;
+    font: 16pt 'KnockoutHTF34JuniorSumo';
+    letter-spacing: .1em;
+    height: 47px;
+    line-height: 44px;
+    border: 4px double gray;
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border-color: #ccc;
+}
+
+.input-group-addon:first-child {
+    padding-top: 25px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */}
+::-moz-placeholder { /* Firefox 19+ */}
+:-ms-input-placeholder { /* IE 10+ */}
+:-moz-placeholder { /* Firefox 18- */}
+
+.form-error, .form-warning {
+    font: 10pt 'KnockoutHTF34JuniorSumo';
+    color: rgba(204,39,62,.8);
+}

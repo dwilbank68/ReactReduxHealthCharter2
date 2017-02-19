@@ -1,0 +1,65 @@
+section {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+//B'FAST
+.meal-header {
+    font: 22pt 'SaracenHTFBlack';
+    letter-spacing: .25em;
+}
+
+//Salt (mg)
+.heading {
+    font: 9pt 'KnockoutHTF52Cruiserweight';
+    color: #5093A3;
+    letter-spacing: .25em;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+//Turkey Sandwich
+.item {
+    font: 12pt 'SentinelSemiBold';
+    width: 75%;
+    text-align: right;
+    &:focus {
+        outline:none
+    }
+}
+
+//250
+.amt {
+    font: 12pt 'SentinelBlackItalic';
+    width: 25%;
+    text-align: right;
+    &:focus {
+        outline:none
+    }
+}
+
+.water {
+    padding-top: 15px;
+}
+
+// Total:      120
+.sub-total-item, .sub-total-amt {
+    padding-top: 15px;
+    font: 10pt 'KnockoutHTF34JuniorSumo';
+}
+
+// Total:      120
+.sub-total-amt {
+    text-align: right;
+    right: -13px !important;
+    padding-left: 0px !important;
+}
+
+.submit {
+    padding-top: 4px;
+    margin-top: 27px;
+    height: 34px;
+    width: 145px;
+    font: 14pt 'ZigguratHTFBlack';
+    background-color: #E1E1E1;
+}

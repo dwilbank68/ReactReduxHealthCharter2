@@ -1,0 +1,76 @@
+.food-list-box {
+    height: 194px !important;
+    overflow: hidden;
+    border-top-right-radius: 25px;
+}
+
+.search-salt-container {
+
+    border-bottom: 1px solid gray;
+
+    .salt-display {
+        font: 9pt 'SentinelSemibold';
+        color: rgb(170, 28, 58);
+        margin-left: 5px;
+        margin-top: 8px;
+        margin-bottom: 6px;
+        width: 280px;
+    }
+
+}
+
+
+.search-bar {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 200px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 7px;
+
+    input {
+      border-top-right-radius: 14px;
+      border-bottom-right-radius: 7px;
+      font: 10pt 'SentinelSemibold';
+      &:focus {
+        outline: none;
+      }
+    }
+
+}
+
+.food-list {
+    margin-left: -14px;
+    margin-right: -15px;
+    // overflow: scroll;
+    overflow-x: hidden;
+    height: 157px;
+    background-color: #DDD;
+
+    ul {
+      padding-left: 5px;
+      li{
+        box-shadow: 0 2px 5px #888888;
+      }
+    }
+}
+
+
+
+.list-group-item {
+    background-color: #DDD;
+
+    img {
+      width: 60px;
+      height: auto;
+    }
+}
+
+.brand {
+    font: 10pt 'SentinelSemiBold';
+}
+
+.food {
+    font: 9pt 'SentinelBlackItalic';
+}
+

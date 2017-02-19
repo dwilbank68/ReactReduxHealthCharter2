@@ -1,0 +1,86 @@
+table td {
+  border-color: gray;
+}
+
+// WEIGHT
+table.stats {
+    margin-top: 35px;
+}
+
+.header-cell {
+  font: 16pt 'KnockoutHTF27JuniorBantamwt';
+  letter-spacing: .05em;
+  padding-top: 16px;
+  width: 110px;
+  padding-left: 7px;
+  height: 30px !important;
+}
+
+// 180
+.total, .heartrate, .bp, .weight {
+  font: 15pt 'SentinelBold';
+}
+
+
+.heartrate, .bp, .weight {
+  padding-top: 13px;
+}
+
+.total {
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.stat-input {
+  text-align: right;
+  width: 100% !important;
+}
+
+.stat-input-bp-parent {
+  display: inline-flex;
+  border:0;
+}
+
+.stat-input-bp-sys, .stat-input-bp-dia {
+  text-align: right;
+  width: 100% !important;
+  height: 26px !important;
+  border: 0;
+  &:focus {
+    outline:none;
+  }
+}
+
+// Daily Salt Max: 2000 mg
+.legend {
+  font: .75em 'SentinelSemiboldItalic';
+  column-span: 2;
+  padding: 12.5px 0 8px 10px;
+  color: #5093A3 !important;
+}
+
+// lbs
+.units-box {
+  font: 10pt 'SentinelBlackItalic';
+  padding-top: 12px;
+  padding-left: 5px !important;
+}
+
+.input-wrapper {
+  transition: border-bottom 0.33s ease;
+  height: 30px;
+}
+
+.stat-input-bp-sys {
+  border-right: 1px solid gray;
+}
+
+.stat-input-bp-sys:focus {
+  outline:none;
+}
+
+.bp {
+  display: flex !important;
+  justify-content: space-between;
+}
