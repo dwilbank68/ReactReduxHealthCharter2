@@ -16,25 +16,29 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: __dirname,
-    publicPath: '/',
+    path: path.resolve(__dirname),
+    publicPath: 'build/',
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
         {
-            loader: 'babel',
+            loader: 'babel-loader',
             exclude: /node_modules/,
             query: {
                 presets: ['react', 'es2015', 'stage-1']
             },
         },
-        {test:/\.css$/, loader: 'style-loader!css-loader'},
-        {test:/\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
-        {test:/\.less$/, loader: 'style-loader!css-loader!less-loader'},
-        {test:/\.gif$/, loader: 'url-loader?mimetype-image/png'},
-        {test:/\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/, loader: 'url-loader?mimetype-application/font-woff'},
-        {test:/\.(ttf|eot|svg)(\?v=[0-9].[0-9].[0-9])?$/, loader: 'file-loader?name=[name].[ext]'}
+        {test:/\.css$/, use: ['style-loader','css-loader']},
+        {test:/\.scss$/, use: ['style-loader','css-loader','sass-loader']},
+        {test:/\.less$/, use: ['style-loader','css-loader','less-loader']},
+        // {test:/\.gif$/, use: ['url-loader?mimetype-image/png']},
+        {test:/\.(jpe?g|png|gif|svg)$/, use:[
+            {loader:'url-loader', options:{limit:40000}},
+            'image-webpack-loader'
+        ]},
+        {test:/\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/, use: 'url-loader?mimetype-application/font-woff'},
+        {test:/\.(ttf|eot|svg)(\?v=[0-9].[0-9].[0-9])?$/, use: 'file-loader?name=[name].[ext]'}
         // {test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=public/fonts/[name].[ext]'}
     ]
   },
@@ -48,13 +52,13 @@ module.exports = {
         })
     ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx']
   },
-  sassLoader: {
-    includePaths: [
-      path.resolve(__dirname, './node_modules/foundation-sites/scss')
-    ]
-  },
+  // sassLoader: {
+  //   includePaths: [
+  //     path.resolve(__dirname, './node_modules/foundation-sites/scss')
+  //   ]
+  // },
   devServer: {
     historyApiFallback: true,
     contentBase: './'
