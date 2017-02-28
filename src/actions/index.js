@@ -21,8 +21,8 @@ import toastr from 'toastr';
 toastr.options.preventDuplicates = true;
 toastr.options.timeOut = 4;
 
-// const ROOT_URL = 'https://wilbanks-node-api.herokuapp.com/'
-const ROOT_URL = 'http://localhost:3000';
+const ROOT_URL = 'https://health-tracker-api.herokuapp.com';
+// const ROOT_URL = 'http://localhost:3000';
 
 export function authError(error) {
     return {
@@ -268,6 +268,9 @@ export function signinUser({email, password}) {
         axios
             .post(`${ROOT_URL}/users/login`, {email, password})
             .then((response)=> {
+                console.log('------------------------------------------');
+                console.log('response.headers[x-auth] after signin',response.headers['x-auth']);
+                console.log('------------------------------------------');
                 dispatch({type: AUTH_USER});
                 localStorage
                     .setItem('token', response.headers['x-auth']);

@@ -8,3 +8,6 @@ npm-debug.log
 /dummyData.json
 /.notes
 /config/development.env
+/chartJS2Scratch.js
+/src/scratch.html
+dist

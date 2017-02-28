@@ -2,6 +2,8 @@
     height: 194px !important;
     overflow: hidden;
     border-top-right-radius: 25px;
+    background-color: rgba(0,0,0,.07);
+
 }
 
 .search-salt-container {
@@ -45,7 +47,6 @@
     // overflow: scroll;
     overflow-x: hidden;
     height: 157px;
-    background-color: #DDD;
 
     ul {
       padding-left: 5px;

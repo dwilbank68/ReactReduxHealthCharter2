@@ -7,7 +7,6 @@ export default class App extends Component {
         return (
             <div>
                 <Header/>
-                <img src="paper1" alt=""/>
                 <div className="container-fluid">
                     {this.props.children}
                 </div>

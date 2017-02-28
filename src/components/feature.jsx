@@ -200,7 +200,7 @@ class Feature extends Component {
                     </div>
                     <div className="col-xs-3 top-right">
                         <Calendar   className="calendar" {...date}
-                                    max={new Date()}
+
                                     value={this.props.date}
                                     onChange={handleDateChange}/>
                     </div>

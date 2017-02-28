@@ -14,8 +14,23 @@ html {
     //min-width: 850px;
 }
 
-body, input[type="text"], input[type="number"] {
-    background-color: #E1E1E1;
+body, input[type="text"], input[type="number"], input[type="search"] {
+    //background-color: #E1E1E1;
+    //background: url(https://dl.dropboxusercontent.com/u/2048705/paper-background-12.jpg);
+    background: url(https://dl.dropboxusercontent.com/u/2048705/paper-background-1.jpg);
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn't move when
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
 }
 
 .error { color: red; }
@@ -50,69 +65,3 @@ input {
 input[type=number] {-moz-appearance: textfield;}            // firefox
 ::-webkit-inner-spin-button { -webkit-appearance: none;}    // chrome
 ::-webkit-outer-spin-button { -webkit-appearance: none;}    // chrome
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// calendar stuff because it is not importing properly
-
-.rw-calendar {
-    width: 248px;
-    margin-left: 0px;
-    margin-bottom: 50px;
-    background-color: #DDD;
-}
-
-#rw_1_calendar {
-    height:11em;
-    span {
-        // numbers on calendar
-        font: 6pt 'SentinelSemibold';
-    }
-    .rw-header {
-        #rw_1_calendar_label {
-            // couldn't set font here...
-            span {
-                //font-size: 12px !important;
-            }
-        }
-    }
-
-    //Mo, Tu, We, Th, Fr, Sa
-    th {
-        font: 12pt 'SentinelBold';
-        font-size: 12px !important;
-    }
-
-    tbody {
-        .rw-btn {
-            line-height: .6em !important;
-            font-size: 12px !important;
-        }
-    }
-
-    td {
-        height: 25px !important;
-        border: 1px solid #DDD;
-    }
-}
-
-#rw_1_calendar_label {
-    font: 12pt 'SentinelBold';
-}
-
-td {
-    border: 1px solid #010101;
-}
