@@ -268,11 +268,6 @@ export function signinUser({email, password}) {
         axios
             .post(`${ROOT_URL}/users/login`, {email, password})
             .then((response)=> {
-                console.log('------------------------------------------');
-                console.log('response.headers after signin',response.headers);
-                console.log('response.headers[x-auth] after signin',response.headers['x-auth']);
-                console.log('response.headers[X-Auth] after signin',response.headers['X-Auth']);
-                console.log('------------------------------------------');
                 dispatch({type: AUTH_USER});
                 localStorage
                     .setItem('token', response.headers['x-auth']);
