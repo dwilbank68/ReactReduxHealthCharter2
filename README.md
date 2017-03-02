@@ -1,28 +1,30 @@
-### Features
+live at [https://wilbanks-health-tracker.herokuapp.com](https://wilbanks-health-tracker.herokuapp.com)
 
-    jwt authentication
+# Heart Health Tracker
 
-built for backend at 
-https://wilbanks-node-api.herokuapp.com/
+## Dynamic Charts
+* Dual charts make trends and correlations plain to see
+* Hover over a bar to see the stats for that day
+* Click a bar to revisit the entries for that day
+* Track your daily salt and water intake
+* Totals are calculated automatically
+## Research Foods
+* Look up the salt content of over 700,000 foods in the Nutritionix Database
+## Alternate Table View
+* Data is also provided in a tabular form for easy cutting-and-pasting
 
-npm run start
+# Technologies
 
-port 8080/feature
+### React/Redux front-end
+* Redux-Form
+* Chart.js - (moving to D3 soon because Chart.js is misbehaving)
+* Nutritionix package for their API
+* React-Widgets (Calendar)
+* React-Table
+* React-Scrollbox
+* React-Table
+* Reselect
+* toastr
 
-    state = {
-        auth: {
-            user: {
-                email: STRING,
-                id: STRING
-            },
-            authenticated: BOOLEAN,
-            error: STRING
-        }
-    }
-
-styling
-
-http://www.typography.com/techniques/
-
-
-http://www.typography.com/images/ask-hfj/combining-fonts/combo-b-hover-2.jpg
+### Node/Express back-end
+* mongoose - mongolab database
