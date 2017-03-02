@@ -1,5 +1,5 @@
 /node_modules
-bundle.js
+
 npm-debug.log
 
 # IntelliJ
@@ -10,3 +10,4 @@ npm-debug.log
 /config/development.env
 /chartJS2Scratch.js
 /src/scratch.html
+
