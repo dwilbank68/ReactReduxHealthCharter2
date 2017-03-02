@@ -1,12 +1,18 @@
 .welcome {
     margin-top: 80px;
-    p {
+  p {
         font: 12pt 'SentinelSemibold';
     }
+
+
 
     .welcome-title {
         font: 64pt 'KnockoutHTF67FullBantamwt';
         letter-spacing: .05em;
+        border:1px solid transparent;
+        height: 64px;
+        text-decoration: none;
+
     }
 
     .middle-row {
@@ -21,4 +27,10 @@
     }
 }
 
+.go-to-feature {
+    font: 48pt 'Helvetica Neue';
+}
 
+a:focus, a:hover {
+  text-decoration: none !important;
+}

@@ -188,7 +188,7 @@ class Feature extends Component {
             <div className="feature">
 
                 <div className="row">
-                    <div className="col-xs-9 top-right welcome-title">
+                    <div className="col-xs-9 top-left">
                         <div className="top-left food-list-box">
                             <div className="search-salt-container">
                                 <SearchBar  onSearchTermChange={foodSearch} />
@@ -200,7 +200,6 @@ class Feature extends Component {
                     </div>
                     <div className="col-xs-3 top-right">
                         <Calendar   className="calendar" {...date}
-
                                     value={this.props.date}
                                     onChange={handleDateChange}/>
                     </div>

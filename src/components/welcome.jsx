@@ -7,10 +7,24 @@ const welcome = ({loggedIn}) => {
     var title = "HEART HEALTH TRACKER";
     return (
         <div className="welcome container">
-            <div className="row top-row">
-                <div className="col-xs-6 col-xs-offset-3 text-center welcome-title">
-                    HEART HEALTH TRACKER
+            <div className="row">
+                <div className="col-xs-6 col-xs-offset-3 text-center ">
+                    {
+                        loggedIn ?
+                        <div className="welcome-title">
+                            HEART HEALTH TRACKER
+                            <Link to="feature" className="go-to-feature ">
+                                &#9758;
+                            </Link>
+                        </div>
+                            :
+                        <div className="welcome-title">
+                            HEART HEALTH TRACKER
+                        </div>
+                    }
                 </div>
+
+
             </div>
 
             <div className="row middle-row">
@@ -32,7 +46,6 @@ const welcome = ({loggedIn}) => {
                 </div>
             </div>
 
-            {loggedIn ? <span>logged in</span>: <span>not logged in</span>}
 
             <div>
             </div>

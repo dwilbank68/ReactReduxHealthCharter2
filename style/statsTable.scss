@@ -18,12 +18,12 @@ table.stats {
 
 // 180
 .total, .heartrate, .bp, .weight {
-  font: 15pt 'SentinelBold';
+  font: 15pt 'SentinelBold' !important;
 }
 
 
 .heartrate, .bp, .weight {
-  padding-top: 13px;
+  padding-top: 13px !important;
 }
 
 .total {
