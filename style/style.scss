@@ -16,6 +16,8 @@ html {
 
 body, input[type="text"], input[type="number"], input[type="search"] {
     background: url(https://dl.dropboxusercontent.com/u/2048705/paper-background-1.jpg);
+    // background-image: url("../assets/paper-background-1.jpg"); // for development
+    // background-image: url("paper-background-1.jpg"); // for production
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

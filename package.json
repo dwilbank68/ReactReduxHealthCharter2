@@ -6,7 +6,7 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "build": "NODE_ENV=production npm run _clean && webpack -p",
-    "postbuild": "cp ./index.html ./dist/",
+    "postbuild": "cp ./index.html ./assets/paper-background-1.jpg ./dist/",
     "_clean": "rimraf dist",
     "start": "nodemon ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
