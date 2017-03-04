@@ -39,7 +39,7 @@ module.exports = {
         // {test:/\.css$/, use: ['style-loader','css-loader']},
         // {test:/\.scss$/, use: ['style-loader','css-loader','sass-loader']},
         // {test:/\.less$/, use: ['style-loader','css-loader','less-loader']},
-        // // {test:/\.gif$/, use: ['url-loader?mimetype-image/png']},
+        // {test:/\.gif$/, use: ['url-loader?mimetype-image/png']},
         {test:/\.(jpe?g|png|gif|svg)$/, use:[
             {loader:'url-loader', options:{limit:40000}},
             'image-webpack-loader'
