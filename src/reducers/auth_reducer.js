@@ -1,11 +1,13 @@
 import {
-    AUTH_USER,
-    UNAUTH_USER,
     AUTH_ERROR,
-    FETCH_MESSAGE
+    AUTH_USER,
+    FETCH_MESSAGE,
+    SUBMISSION_COMPLETE,
+    SUBMITTING,
+    UNAUTH_USER
 } from '../actions/types';
 
-const defaultState = {user:{}};
+const defaultState = {user:{}, submitting: false};
 var authReducer = (state=defaultState, action) => {
 
     switch(action.type){
@@ -16,6 +18,8 @@ var authReducer = (state=defaultState, action) => {
                                                         email: action.payload.email,
                                                         id: action.payload.id
                                                     }};
+        case SUBMITTING: return {...state, submitting: true};
+        case SUBMISSION_COMPLETE: return {...state, submitting: false};
         default: return state;
     };
 };

@@ -16,7 +16,7 @@ class Signin extends Component {
 
     render() {
 
-        const {handleSubmit} = this.props;
+        const {handleSubmit, pristine, submitting} = this.props;
         //const {email, password} = this.props.fields;
         return (
             <div className="container">
@@ -39,9 +39,13 @@ class Signin extends Component {
                             {this.renderAlert()}
 
                             <div className="text-center">
-                                <button className="btn btn-large btn-block btn-primary-outline" id="btn-signin" action="submit">
+                                <button className="btn btn-large btn-block btn-primary-outline"
+                                        id="btn-signin"
+                                        action="submit"
+                                        disabled={pristine}>
                                     SIGN IN
                                 </button>
+                                {submitting ? 'submitting':'not submitting'}
                             </div>
 
                         </form>
@@ -67,7 +71,10 @@ Signin.propTypes = {};
 Signin.defaultProps = {};
 
 function mapStateToProps(state){
-    return {errorMessage: state.auth.error};
+    return {
+        errorMessage: state.auth.error,
+        submitting: state.auth.submitting
+    };
 }
 
 const configObj = {

@@ -8,6 +8,8 @@ import {
     LOAD_ALL_DAYS,
     LOAD_ALL_DAYS_PRINTABLE,
     LOAD_DAY_DATA,
+    SUBMITTING,
+    SUBMISSION_COMPLETE,
     UNAUTH_USER
 } from './types';
 
@@ -264,11 +266,12 @@ export function fetchUserInfo() {
 
 export function signinUser({email, password}) {
     return function (dispatch) {
-
+        dispatch({type: SUBMITTING})
         axios
             .post(`${ROOT_URL}/users/login`, {email, password})
             .then((response)=> {
                 dispatch({type: AUTH_USER});
+                dispatch({type: SUBMISSION_COMPLETE});
                 localStorage
                     .setItem('token', response.headers['x-auth']);
                 return true;

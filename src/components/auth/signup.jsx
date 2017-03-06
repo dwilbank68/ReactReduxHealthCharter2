@@ -73,6 +73,7 @@ class Signup extends Component {
                             {this.renderAlert()}
                             <button className="btn btn-block btn-large btn-primary-outline" id='btn-signup' action="submit">
                                 SIGN UP
+                                <i className="glyphicon glyphicon-cog gly-spin"/>
                             </button>
                         </form>
                     </div>
