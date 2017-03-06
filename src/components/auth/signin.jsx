@@ -16,7 +16,7 @@ class Signin extends Component {
 
     render() {
 
-        const {handleSubmit, pristine, submitting} = this.props;
+        const {handleSubmit, pristine, inProgress} = this.props;
         //const {email, password} = this.props.fields;
         return (
             <div className="container">
@@ -43,9 +43,11 @@ class Signin extends Component {
                                         id="btn-signin"
                                         action="submit"
                                         disabled={pristine}>
-                                    SIGN IN
+                                    {inProgress ?
+                                        <span className="pulsate">SIGNING IN</span>
+                                        :
+                                        <span>SIGN IN</span>}
                                 </button>
-                                {submitting ? 'submitting':'not submitting'}
                             </div>
 
                         </form>
@@ -73,7 +75,7 @@ Signin.defaultProps = {};
 function mapStateToProps(state){
     return {
         errorMessage: state.auth.error,
-        submitting: state.auth.submitting
+        inProgress: state.auth.submitting
     };
 }
 

@@ -42,7 +42,7 @@ class Signup extends Component {
         };
         const required = value => value ? undefined : 'Required';
 
-        const {handleSubmit} = this.props;
+        const {handleSubmit, inProgress} = this.props;
         // const {email, password, passwordConfirm} = this.props.fields;
 
         return (
@@ -72,8 +72,10 @@ class Signup extends Component {
                             </fieldset>
                             {this.renderAlert()}
                             <button className="btn btn-block btn-large btn-primary-outline" id='btn-signup' action="submit">
-                                SIGN UP
-                                <i className="glyphicon glyphicon-cog gly-spin"/>
+                                {inProgress ?
+                                    <span className="pulsate">SIGNING UP</span>
+                                    :
+                                    <span>SIGN UP</span>}
                             </button>
                         </form>
                     </div>
@@ -97,7 +99,10 @@ Signup.propTypes = {};
 Signup.defaultProps = {};
 
 function mapStateToProps(state){
-    return {errorMessage: state.auth.error};
+    return {
+        errorMessage: state.auth.error,
+        inProgress: state.auth.submitting
+    };
 }
 
 const formOptions = {

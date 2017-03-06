@@ -266,22 +266,25 @@ export function fetchUserInfo() {
 
 export function signinUser({email, password}) {
     return function (dispatch) {
-        dispatch({type: SUBMITTING})
+        dispatch({type: SUBMITTING});
         axios
             .post(`${ROOT_URL}/users/login`, {email, password})
             .then((response)=> {
                 dispatch({type: AUTH_USER});
-                dispatch({type: SUBMISSION_COMPLETE});
                 localStorage
                     .setItem('token', response.headers['x-auth']);
                 return true;
             })
             .then(() => {
-                setTimeout(() => browserHistory.push('feature'), 500);
+                setTimeout(() => {
+                    dispatch({type: SUBMISSION_COMPLETE});
+                    browserHistory.push('feature')
+                }, 500);
             })
             .catch((e) => {
                 console.error(e)
-                dispatch(authError('bad login info'))
+                dispatch(authError('bad login info'));
+                dispatch({type: SUBMISSION_COMPLETE});
             })
 
     }
@@ -296,27 +299,27 @@ export function signoutUser() {
 
 export function signupUser({email, password}) {
     return function (dispatch) {
-
+        dispatch({type: SUBMITTING});
         axios
             .post(`${ROOT_URL}/users`, {email, password})
             .then(response=> {
                 dispatch({type: AUTH_USER});
                 localStorage
                     .setItem('token', response.headers['x-auth']);
+                dispatch({type: SUBMISSION_COMPLETE});
                 browserHistory.push('/feature');
             })
             .catch((e) => {
                 dispatch(authError(e.response.data.error))
+                dispatch({type: SUBMISSION_COMPLETE});
+
             })
 
     }
 }
 
 export function submitData(submitObj) {
-
     let momentDate = Moment(submitObj.date);
-    let dateString = momentDate.format('YYYYMMDD');
-
     return function (dispatch) {
         axios
             .post(
